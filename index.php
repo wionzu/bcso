@@ -32,7 +32,7 @@ if(get('action') == 'login') {
 
   $params = array(
     'client_id' => OAUTH2_CLIENT_ID,
-    'redirect_uri' => 'https://yoursite.location/ifyouneedit',
+    'redirect_uri' => 'https://bcso.pages.dev/',
     'response_type' => 'code',
     'scope' => 'identify guilds'
   );
@@ -51,7 +51,7 @@ if(get('code')) {
     "grant_type" => "authorization_code",
     'client_id' => OAUTH2_CLIENT_ID,
     'client_secret' => OAUTH2_CLIENT_SECRET,
-    'redirect_uri' => 'https://yoursite.location/ifyouneedit',
+    'redirect_uri' => 'https://bcso.pages.dev/',
     'code' => get('code')
   ));
   $logout_token = $token->access_token;
